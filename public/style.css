@@ -1,0 +1,17 @@
+:root { --paper: #fff; --ink: #222; --body: #666; --link: #002fa7; }
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body { margin: 0; background: var(--paper); color: var(--body); font: 21px/1.4 Georgia, 'Times New Roman', serif; -webkit-font-smoothing: antialiased; }
+main { width: min(100% - 48px, 620px); margin: 92px auto 96px; }
+nav { display: flex; flex-wrap: wrap; align-items: baseline; gap: 20px; margin-bottom: 30px; }
+nav a { color: var(--body); }
+nav a[aria-current='page'] { color: var(--ink); }
+h1 { display: inline; margin: 0; font: inherit; color: var(--ink); }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+p { margin: 0 0 16px; }
+.social { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .025em; }
+.social a { color: var(--body); }
+.social span { color: var(--body); }
+@media (max-width: 640px) { body { font-size: 20px; } main { margin-top: 52px; } nav { gap: 16px; } }
