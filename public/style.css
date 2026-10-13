@@ -1,4 +1,4 @@
-:root { --paper: #fff; --ink: #222; --body: #666; --link: #002fa7; }
+:root { --paper: #fff; --ink: #222; --body: #666; --link: #002fa7; --line: #e5e5e5; }
 * { box-sizing: border-box; }
 html { color-scheme: light; }
 body { margin: 0; background: var(--paper); color: var(--body); font: 21px/1.4 Georgia, 'Times New Roman', serif; -webkit-font-smoothing: antialiased; }
@@ -7,6 +7,22 @@ nav { display: flex; flex-wrap: wrap; align-items: baseline; gap: 20px; margin-b
 nav a { color: var(--body); }
 nav a[aria-current='page'] { color: var(--ink); }
 h1 { display: inline; margin: 0; font: inherit; color: var(--ink); }
+.page-title { display: block; margin-bottom: 20px; }
+h2 { margin: 0 0 16px; color: var(--ink); font: inherit; }
+h3 { margin: 0 0 12px; font: inherit; }
+.section { margin-top: 40px; }
+.small { font-size: 17px; line-height: 1.5; }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 24px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.projects > div { padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+dt { margin-bottom: 8px; font-size: 18px; }
+dd { margin: 0; font-size: 17px; line-height: 1.5; }
+.plain-list, .entries { list-style: none; padding: 0; margin: 0; }
+.plain-list li { margin-bottom: 12px; }
+.entries li { margin-bottom: 24px; }
+.entries p { margin: 8px 0 0; }
+.meta { display: block; margin-top: 6px; font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--body); }
+.publication { border-top: 1px solid var(--line); padding-top: 20px; }
+cite { font-style: normal; }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
@@ -15,3 +31,4 @@ p { margin: 0 0 16px; }
 .social a { color: var(--body); }
 .social span { color: var(--body); }
 @media (max-width: 640px) { body { font-size: 20px; } main { margin-top: 52px; } nav { gap: 16px; } }
+@media (max-width: 400px) { .projects { grid-template-columns: 1fr; } }
