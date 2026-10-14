@@ -20,4 +20,4 @@ See [CONTENT-SOURCES.md](CONTENT-SOURCES.md) for the sources behind biographical
 
 ## Project stories
 
-`public/works/{qube,tracedog,lenze,translucid,diagnos}/index.html` contains the project stories. Media lives in `public/media/`; the Diagnos archive is collapsed by default. The homepage separates current work, side projects, and past work. Keep project statuses consistent with About, and keep new URLs in the sitemap. Research distinguishes published conference/journal work from the preprint. This remains a static site with no runtime JavaScript.
+`public/works/{qube,tracedog,lenze,translucid,diagnos,brailly}/index.html` contains the project stories. Media lives in `public/media/`; archival images appear within the project narratives. The homepage separates current work, side projects, and past work. Keep project statuses consistent with About, and keep new URLs in the sitemap. Research distinguishes published conference/journal work from the preprint. This remains a static site with no runtime JavaScript.
