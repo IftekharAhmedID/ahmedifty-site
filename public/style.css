@@ -38,7 +38,6 @@ figure { margin: 24px 0; }
 figure img, video { display: block; width: 100%; height: auto; }
 figcaption { margin-top: 9px; font: 14px/1.5 Georgia, 'Times New Roman', serif; color: var(--body); }
 .work-entry { border-top: 1px solid var(--line); padding-top: 20px; margin-bottom: 28px; }
-.project-links { margin-top: 16px; }
 .eyebrow { font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; margin-bottom: 12px; }
 main > h2 { margin-top: 36px; }
 .concept { max-width: 480px; margin: 28px auto; }
@@ -55,3 +54,8 @@ summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
 .story-section { margin-top: 36px; scroll-margin-top: 24px; }
 .story figure { margin: 28px 0; }
 .story header .page-title { font-size: 26px; line-height: 1.3; }
+
+.project-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+.visit-link { font-size: 14px; font-weight: normal; white-space: nowrap; }
+.project-page-heading { margin-bottom: 20px; }
+.project-page-heading .page-title { flex: 1 1 260px; margin-bottom: 0; }
