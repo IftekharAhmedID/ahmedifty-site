@@ -17,3 +17,7 @@ Static Site in the Personal Portfolio project. Build command: `true`. Publish di
 ## Content sources
 
 See [CONTENT-SOURCES.md](CONTENT-SOURCES.md) for the sources behind biographical details, publications, and press links. All pages are static HTML with directory indexes; no application routing or dependencies are needed. Preserve the Google ownership verification and IndexNow files.
+
+## Project stories
+
+`public/works/{qube,tracedog,lenze,translucid,diagnos}/index.html` contains the project stories. Media lives in `public/media/`; the Diagnos archive is collapsed by default. The homepage separates current work, side projects, and past work. Keep project statuses consistent with About, and keep new URLs in the sitemap. Research distinguishes published conference/journal work from the preprint. This remains a static site with no runtime JavaScript.

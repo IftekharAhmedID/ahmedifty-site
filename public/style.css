@@ -32,3 +32,22 @@ p { margin: 0 0 16px; }
 .social span { color: var(--body); }
 @media (max-width: 640px) { body { font-size: 20px; } main { margin-top: 52px; } nav { gap: 16px; } }
 @media (max-width: 400px) { .projects { grid-template-columns: 1fr; } }
+
+/* Project stories retain the same narrow, type-first layout. */
+figure { margin: 24px 0; }
+figure img, video { display: block; width: 100%; height: auto; }
+figcaption { margin-top: 9px; font: 14px/1.5 Georgia, 'Times New Roman', serif; color: var(--body); }
+.work-entry { border-top: 1px solid var(--line); padding-top: 20px; margin-bottom: 28px; }
+.project-links { margin-top: 16px; }
+.eyebrow { font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; margin-bottom: 12px; }
+main > h2 { margin-top: 36px; }
+.concept { max-width: 480px; margin: 28px auto; }
+.portrait { max-width: 440px; margin: 28px auto; }
+.media-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.media-pair figure { min-width: 0; }
+.publication + .publication { margin-top: 28px; }
+details { border-top: 1px solid var(--line); padding-top: 18px; margin: 28px 0; }
+summary { cursor: pointer; color: var(--link); }
+summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+@media (max-width: 400px) { .media-pair { gap: 12px; } }
+@media (max-width: 400px) { nav { font-size: 17px; gap: 12px; } }
