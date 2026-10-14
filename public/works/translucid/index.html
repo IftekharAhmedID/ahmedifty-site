@@ -1,25 +1,55 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Translucid — The infrastructure behind Qube | Iftekhar Ahmed</title>
-<meta name="description" content="Translucid.cloud, earlier work by Iftekhar Ahmed on isolated cloud workspaces and protected streaming, became the infrastructure that made Qube possible.">
+<title>Translucid: how the infrastructure became Qube | Iftekhar Ahmed (Ifty)</title>
+<meta name="description" content="Iftekhar Ahmed tells the story of Translucid.cloud: protected cloud sessions, infrastructure adoption challenges, team changes, and the pivot into Qube.">
 <link rel="canonical" href="https://ahmedifty.com/works/translucid/">
-<meta property="og:title" content="Translucid — The infrastructure behind Qube | Iftekhar Ahmed"><meta property="og:description" content="Translucid.cloud, earlier work by Iftekhar Ahmed on isolated cloud workspaces and protected streaming, became the infrastructure that made Qube possible.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://ahmedifty.com/works/translucid/">
+<meta property="og:title" content="Translucid: how the infrastructure became Qube | Iftekhar Ahmed"><meta property="og:description" content="Iftekhar Ahmed tells the story of Translucid.cloud: protected cloud sessions, infrastructure adoption challenges, team changes, and the pivot into Qube.">
+<meta property="og:type" content="article"><meta property="og:url" content="https://ahmedifty.com/works/translucid/">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=20261014">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://ahmedifty.com/#person", "name": "Iftekhar Ahmed", "alternateName": ["Ifty Ahmed", "Iftekhar Ahmed Tonoy", "Iftekhar “Ifty” Ahmed"], "url": "https://ahmedifty.com/", "description": "Computer science student at Rice University, building secure communication systems, AI tools, and accessible technology.", "affiliation": {"@type": "CollegeOrUniversity", "name": "Rice University", "url": "https://www.rice.edu/"}, "sameAs": ["https://profiles.rice.edu/student/iftekhar-ifty-ahmed", "https://solve.mit.edu/solutions/14005", "https://www.linkedin.com/in/iftekhar-ahmed-", "https://github.com/IftekharAhmedID", "https://www.researchgate.net/profile/Iftekhar-Ahmed-31"]}, {"@type": "WebPage", "@id": "https://ahmedifty.com/works/translucid/#webpage", "url": "https://ahmedifty.com/works/translucid/", "name": "Translucid — The infrastructure behind Qube | Iftekhar Ahmed", "mainEntity": {"@id": "https://ahmedifty.com/works/translucid/#project"}}, {"@type": "CreativeWork", "@id": "https://ahmedifty.com/works/translucid/#project", "name": "Translucid", "description": "Translucid.cloud, earlier work by Iftekhar Ahmed on isolated cloud workspaces and protected streaming, became the infrastructure that made Qube possible.", "url": "https://ahmedifty.com/works/translucid/", "creator": {"@id": "https://ahmedifty.com/#person"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ifty Ahmed", "item": "https://ahmedifty.com/"}, {"@type": "ListItem", "position": 2, "name": "Translucid", "item": "https://ahmedifty.com/works/translucid/"}]}]}</script>
-</head><body><main><nav aria-label="Main navigation"><a href="/">Ifty Ahmed</a> <a href="/about/">About</a> <a href="/research/">Research</a> <a href="/press/">Press</a></nav>
-<p class="eyebrow">Past work · A project by Iftekhar Ahmed</p><h1 class="page-title">Translucid.cloud</h1><p>The protected-session infrastructure that made Qube possible.</p>
-<p>Translucid began as infrastructure other platforms could embed: a secure, interactive cloud workspace for assessments, interviews, and sensitive remote work.</p>
-<p>The browser, terminal, or development environment would run in an isolated cloud session. Keyboard and mouse input would travel to that environment; its screen output would return through an encrypted media stream and browser-supported protected playback.</p>
-<h2>Building the foundation</h2>
-<p>I worked on cloud isolation, session policies, DRM/CDM-protected streaming, input relay, and the lifecycle of disposable workspaces. The practical questions were as important as the architecture: startup time, latency, reconnecting, and differences between browsers and operating systems.</p>
-<p>As a standalone product, Translucid was intended to let a developer keep their own application and add this protected session layer underneath it.</p>
-<h2>Why it became Qube</h2>
-<p>Different platforms needed different environments, integrations, and policies. The technology had many possible uses, but that made it difficult to focus the product and give someone a simple starting point.</p>
-<p>I took the infrastructure into <a href="/works/qube/">Qube</a>: one meeting experience with a shared cloud computer. Qube was born from Translucid’s work, and now gives that foundation a focused application.</p>
-<p class="small"><a href="https://translucid.cloud/">Visit Translucid.cloud</a> / <a href="/works/qube/">Explore Qube</a></p>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=20261014b">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://ahmedifty.com/#person", "name": "Iftekhar Ahmed", "alternateName": ["Ifty Ahmed", "Iftekhar Ahmed Tonoy", "Iftekhar “Ifty” Ahmed"], "url": "https://ahmedifty.com/", "description": "Computer science student at Rice University, building secure communication systems, AI tools, and accessible technology.", "affiliation": {"@type": "CollegeOrUniversity", "name": "Rice University", "url": "https://www.rice.edu/"}, "sameAs": ["https://profiles.rice.edu/student/iftekhar-ifty-ahmed", "https://solve.mit.edu/solutions/14005", "https://www.linkedin.com/in/iftekhar-ahmed-", "https://github.com/IftekharAhmedID", "https://www.researchgate.net/profile/Iftekhar-Ahmed-31"]}, {"@type": "Article", "@id": "https://ahmedifty.com/works/translucid/#story", "headline": "Translucid: how the infrastructure became Qube", "description": "Iftekhar Ahmed tells the story of Translucid.cloud: protected cloud sessions, infrastructure adoption challenges, team changes, and the pivot into Qube.", "url": "https://ahmedifty.com/works/translucid/", "author": {"@id": "https://ahmedifty.com/#person"}, "mainEntityOfPage": "https://ahmedifty.com/works/translucid/", "dateModified": "2026-10-14", "about": {"@type": "CreativeWork", "name": "Translucid"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ifty Ahmed", "item": "https://ahmedifty.com/"}, {"@type": "ListItem", "position": 2, "name": "Translucid: how the infrastructure became Qube", "item": "https://ahmedifty.com/works/translucid/"}]}]}</script>
+</head><body><main><nav aria-label="Main navigation"><a href="/">Ifty Ahmed</a> <a href="/about/">About</a> <a href="/research/">Research</a> <a href="/press/">Press</a></nav><article class="story"><header><p class="eyebrow">Past work · By <a rel="author" href="/about/">Iftekhar Ahmed (Ifty)</a></p>
+<h1 class="page-title">Translucid: how the infrastructure became Qube</h1>
+<p>Seven months of engineering, more than thirty customer conversations, and a change in what I was asking people to adopt.</p>
+</header>
+<div class="story-contents small" aria-label="In this story"><a href="#problem">Why I started with assessments</a> · <a href="#engineering">The work behind a responsive session</a> · <a href="#scope">Every use case asked for a different environment</a> · <a href="#adoption">What thirty-plus conversations changed</a> · <a href="#pivot">Giving the technology a product of its own</a> · <a href="#reflection">What those months were worth</a></div>
+<section class="story-section" id="problem"><h2>Why I started with assessments</h2>
+<p>Real-time AI tools made me question the assumptions behind online assessments. An assistant could interpret a screen or listen to a conversation from outside the application being monitored. Restricting what happened inside a browser tab could only address part of that problem.</p>
+<p>I wanted to move the sensitive workspace into an environment the platform could control. The participant would still interact through a browser, but the actual browser, terminal, or assessment software would run in an isolated cloud session.</p>
+<p>Translucid was my attempt to make that capability available to other companies. An assessment platform could keep its interface and content, then embed our protected workspace underneath it.</p>
+</section>
+<section class="story-section" id="engineering"><h2>The work behind a responsive session</h2>
+<p>I spent roughly seven months working through cloud isolation, browser media security, and the lifecycle of remote sessions. Keyboard and mouse input had to reach the cloud machine, and the result had to come back quickly enough for someone to type, navigate, and work comfortably.</p>
+<p>An ordinary remote desktop did not address the whole problem I was interested in. I explored DRM and browser Content Decryption Modules to protect the returned media on supported devices. That brought encryption, session keys, playback behavior, and operating-system differences into the same system.</p>
+<p>A working demonstration was only one part of the job. Sessions needed to start reliably, survive interruptions, and shut down cleanly. A small delay that seemed acceptable while watching video could feel frustrating while editing code.</p>
+<p>The difficult work often happened between those pieces. A healthy network connection did not necessarily mean smooth playback. A session could be running while the user could not yet interact with it. I had to learn to judge the experience from the person using it, as well as from the services underneath.</p>
+</section>
+<section class="story-section" id="scope"><h2>Every use case asked for a different environment</h2>
+<p>The original idea expanded from a protected browser into custom workspaces. A programming interview might need an IDE. A practical certification could need particular command-line tools, software versions, or a configured environment.</p>
+<p>These were plausible uses for the same foundation, but each came with another set of decisions: persistence, network restrictions, authentication, recording, and integration with an existing product.</p>
+<p>I kept seeing possibilities across universities, recruiting platforms, certification providers, and sensitive remote work. It became harder to decide which experience we should make reliable first. Supporting the infrastructure was starting to look like supporting several different products.</p>
+</section>
+<section class="story-section" id="adoption"><h2>What thirty-plus conversations changed</h2>
+<p>I spoke with more than thirty potential customers and people working around assessments and recruiting. I wanted to understand whether Translucid fit into the products they already had.</p>
+<p>Those conversations made the cost of adoption much clearer. Someone considering infrastructure has to think beyond whether the demo works. If they build a critical workflow around it, they inherit its reliability, compatibility, and support risks.</p>
+<p>As a small, unfamiliar company, we had to earn that trust while still proving there was a business. That was difficult. Engineering progress did not automatically make an integration easier for another team to justify.</p>
+<p>I had started with friends, and some stepped away as the work continued. They did not see the same path forward, and I could not point to enough customer evidence to remove the uncertainty. I kept working, but I was asking myself many of the same questions.</p>
+</section>
+<section class="story-section" id="pivot"><h2>Giving the technology a product of its own</h2>
+<p>I eventually decided to build an experience on top of the infrastructure myself. A meeting room was specific enough to explain and useful enough to try without first integrating a new platform into someone else’s application.</p>
+<p>That became <a href="/works/qube/">Qube</a>: video, audio, and a shared cloud computer for sensitive demos and collaboration. The protected-session work stayed valuable, but the entry point changed. Someone could join a room and understand what it did.</p>
+<p>This did not make the engineering simple or solve every security problem. Protection still depends on the device and playback environment. It gave me a clearer product boundary and a direct experience to improve.</p>
+</section>
+<figure><a href="/media/qube.webp"><img width="1400" height="752" src="/media/qube.webp" alt="Qube website showing secure demos and shared cloud collaboration" loading="lazy" decoding="async"></a><figcaption>Qube grew from the Translucid infrastructure into a meeting experience people can use directly.</figcaption></figure>
+<section class="story-section" id="reflection"><h2>What those months were worth</h2>
+<p>I sometimes wish I had tested the adoption question earlier. I was drawn to the technical challenge, and it was easy to interpret another working component as progress toward a company.</p>
+<p>The work was not wasted. Qube depends on things I learned and built through Translucid. But I now separate the value of a technology from the willingness of a particular customer to adopt it.</p>
+<p>I still see uses for Translucid as standalone infrastructure. For now, I am concentrating on the meeting experience it made possible, with a more specific answer to who it is for and how they can start using it.</p>
+</section>
+<p class="small"><a href="https://translucid.cloud/">Translucid.cloud</a> / <a href="/works/qube/">Read about Qube</a></p>
+</article>
+<p class="small"><a href="/">Back to projects</a> / <a href="/research/">Research</a></p>
 <footer class="social" aria-label="Contact links">
       <a href="mailto:iatonoy@gmail.com">EMAIL</a><span aria-hidden="true">/</span>
       <a href="https://www.linkedin.com/in/iftekhar-ahmed-">LINKEDIN</a><span aria-hidden="true">/</span>
