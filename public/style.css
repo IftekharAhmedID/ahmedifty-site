@@ -12,8 +12,6 @@ h2 { margin: 0 0 16px; color: var(--ink); font: inherit; }
 h3 { margin: 0 0 12px; font: inherit; }
 .section { margin-top: 40px; }
 .small { font-size: 15px; line-height: 1.5; }
-.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 24px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.projects > div { padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 dt { margin-bottom: 8px; font-size: 16px; }
 dd { margin: 0; font-size: 15px; line-height: 1.5; }
 .plain-list, .entries { list-style: none; padding: 0; margin: 0; }
@@ -31,7 +29,6 @@ p { margin: 0 0 16px; }
 .social a { color: var(--body); }
 .social span { color: var(--body); }
 @media (max-width: 640px) { body { font-size: 18px; } main { margin-top: 52px; } nav { gap: 16px; } }
-@media (max-width: 400px) { .projects { grid-template-columns: 1fr; } }
 
 /* Project stories retain the same narrow, type-first layout. */
 figure { margin: 24px 0; }
@@ -59,3 +56,13 @@ summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
 .visit-link { font-size: 13px; font-weight: normal; white-space: nowrap; }
 .project-page-heading { margin-bottom: 20px; }
 .project-page-heading .page-title { flex: 1 1 260px; margin-bottom: 0; }
+
+/* One project per row, with a small image beside the writing. */
+.project-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 22px; align-items: start; }
+.project-preview { display: block; }
+.project-preview img { display: block; width: 100%; height: 105px; object-fit: contain; border: 1px solid var(--line); }
+.project-summary p:last-child { margin-bottom: 0; }
+@media (max-width: 480px) {
+  .project-row { grid-template-columns: 88px minmax(0, 1fr); gap: 14px; }
+  .project-preview img { height: 70px; }
+}
