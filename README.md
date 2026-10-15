@@ -1,23 +1,15 @@
-# Ifty Ahmed’s personal site
+# Iftekhar Ahmed
 
-A small static website for ahmedifty.com. Plain HTML and CSS, with no dependencies or JavaScript. The layout follows the sparse serif-text reference supplied by Ifty; bio details came from the existing personal site and his current Translucid work.
+Personal website for Iftekhar Ahmed: [ahmedifty.com](https://ahmedifty.com/).
 
-## Preview
+I’m Iftekhar “Ifty” Ahmed, a computer science student at [Rice University](https://profiles.rice.edu/student/iftekhar-ifty-ahmed). I grew up in Dhaka, Bangladesh, and now study in Houston. Earlier coverage of my work used the name [Iftekhar Ahmed Tonoy](https://www.dhakatribune.com/science-technology-environment/189606/a-homegrown-app-help-assist-blind-people-with).
 
-```sh
-python3 -m http.server 8766 --bind 127.0.0.1 --directory public
-```
+I started building technology in high school. With [Brailly](https://ahmedifty.com/works/brailly/), I worked on affordable devices and software that helped blind students access books, learning tools, and everyday computing. That work included the Blind Eye app and Braille Board, and later my research on [SwingBoard](https://doi.org/10.1080/17483107.2023.2199793), a swipe-based keyboard. Brailly was [selected for MIT Solve’s Tiger Challenge](https://solve.mit.edu/solutions/14005).
 
-Open http://127.0.0.1:8766. Edit `public/index.html` for the introduction and projects, the `index.html` files in `public/about/`, `public/research/`, and `public/press/` for the other pages, and `public/style.css` for the shared layout. Keep `public/sitemap.xml` up to date when adding pages. Pushes to main deploy automatically to Render.
+At Rice, I co-founded [Diagnos](https://ahmedifty.com/works/diagnos/) with Thun Silpsamrit. We built an AI nutrition app that estimates nutrients from food photos and campus dining menus.
 
-## Render
+Today, I’m building [Qube](https://qube.so/), a secure meeting platform born from my earlier work on [Translucid](https://translucid.cloud/) and protected cloud sessions. I’m also exploring source-backed investigations through [TraceDog](https://tracedog.co/) and visual context for AI agents through [Lenze](https://lenze.ai/).
 
-Static Site in the Personal Portfolio project. Build command: `true`. Publish directory: `public`. No application server or secrets required. See DEPLOYMENT.md for domain setup and verification.
+My interests connect human-centered computing, accessibility, AI, and privacy. I’m interested in how people use these systems in practice, and what it takes to make them useful and trustworthy.
 
-## Content sources
-
-See [CONTENT-SOURCES.md](CONTENT-SOURCES.md) for the sources behind biographical details, publications, and press links. All pages are static HTML with directory indexes; no application routing or dependencies are needed. Preserve the Google ownership verification and IndexNow files.
-
-## Project stories
-
-`public/works/{qube,tracedog,lenze,translucid,diagnos,brailly}/index.html` contains the project stories. Media lives in `public/media/`; archival images appear within the project narratives. The homepage separates current work, side projects, and past work. Keep project statuses consistent with About, and keep new URLs in the sitemap. Research distinguishes published conference/journal work from the preprint. This remains a static site with no runtime JavaScript.
+[Research & publications](https://ahmedifty.com/research/) · [Press & talks](https://ahmedifty.com/press/) · [LinkedIn](https://www.linkedin.com/in/iftekhar-ahmed-) · [Email](mailto:iatonoy@gmail.com)
