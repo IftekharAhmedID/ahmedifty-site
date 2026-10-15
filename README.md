@@ -6,7 +6,7 @@ I’m Iftekhar “Ifty” Ahmed, a computer science student at [Rice University]
 
 I started building technology in high school. With [Brailly](https://ahmedifty.com/works/brailly/), I worked on affordable devices and software that helped blind students access books, learning tools, and everyday computing. That work included the Blind Eye app and Braille Board, and later my research on [SwingBoard](https://doi.org/10.1080/17483107.2023.2199793), a swipe-based keyboard. Brailly was [selected for MIT Solve’s Tiger Challenge](https://solve.mit.edu/solutions/14005).
 
-At Rice, I co-founded [Diagnos](https://ahmedifty.com/works/diagnos/) with Thun Silpsamrit. We built an AI nutrition app that estimates nutrients from food photos and campus dining menus.
+At Rice, I co-founded [Diagnos](https://ahmedifty.com/works/diagnos/) with a student team. We built an AI nutrition app that estimates nutrients from food photos and campus dining menus.
 
 Today, I’m building [Qube](https://qube.so/), a secure meeting platform born from my earlier work on [Translucid](https://translucid.cloud/) and protected cloud sessions. I’m also exploring source-backed investigations through [TraceDog](https://tracedog.co/) and visual context for AI agents through [Lenze](https://lenze.ai/).
 
