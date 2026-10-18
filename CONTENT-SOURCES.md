@@ -44,3 +44,8 @@ TraceDog, Lenze and Translucid thumbnails are fresh static snapshots of their pu
 Translucid technical expansion: two owner-supplied platform illustrations are embedded in the engineering narrative. Warm GPU pools and custom VM images explain startup/cost/readiness tradeoffs. Kubernetes is used as a comparison for orchestration concerns, not as an unverified claim of a deployed Kubernetes cluster. Lenze and TraceDog summaries follow their current public landing copy; no guarantee of exhaustive investigation is added.
 
 Diagnos team update: owner confirms a dorm-room start at Rice with five students from different backgrounds and majors, sharing the goal of accessible personalized healthcare. Added the supplied team photo and removed named cofounder references from authored site/README copy. The historical newspaper image is preserved. Demo is silent, muted, inline, autoplaying and looping with controls retained; this supersedes the earlier no-autoplay setting.
+
+## SwingBoard research page
+
+- `/research/swingboard/` summarizes the existing publication and uses the supplied keyboard image. Method details, seven blind participants, 150 one-minute tests, 19.89 WPM, 88% accuracy, historical affiliations, and bibliographic details are attributed to [PubMed](https://pubmed.ncbi.nlm.nih.gov/37098085/) / [the DOI](https://doi.org/10.1080/17483107.2023.2199793). The page does not claim universal superiority, a Rice study, or participation in Würzburg's later VR research.
+- BrailleBeats retains the supplied title and image as plain text because no verified public paper URL or publication status was supplied.
