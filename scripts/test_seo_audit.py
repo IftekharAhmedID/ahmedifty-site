@@ -1,9 +1,31 @@
 """Offline checks for audit identity matching and HTML validation inputs."""
 import unittest
+import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
 from seo_audit import Page, identity
 
 
 class AuditTests(unittest.TestCase):
+    def test_cli_rejects_evidence_inside_repository(self):
+        repo = Path(__file__).resolve().parents[1]
+        result = subprocess.run([sys.executable, str(repo / 'scripts/seo_audit.py'),
+                                 '--output-dir', str(repo / 'public/private-audit')],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertFalse((repo / 'public/private-audit').exists())
+
+    def test_cli_preserves_existing_measurements(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'run.json'
+            path.write_text('{"existing": true}')
+            result = subprocess.run([sys.executable, str(Path(__file__).with_name('seo_audit.py')),
+                                     '--output-dir', folder], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2)
+            self.assertEqual(json.loads(path.read_text()), {'existing': True})
+
     def test_namesakes_and_lookalike_hosts_are_not_matches(self):
         self.assertEqual(identity(None), '')
         self.assertEqual(identity('https://['), '')

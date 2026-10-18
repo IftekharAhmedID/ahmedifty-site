@@ -283,14 +283,16 @@ def main():
     if args.gsc and not args.quota_project:
         parser.error('--gsc requires --quota-project (an existing Search Console API-enabled project)')
     output = args.output_dir.expanduser().resolve()
-    public = Path(__file__).resolve().parents[1] / 'public'
-    if output.is_relative_to(public):
-        parser.error('Keep private audit outputs outside public/')
+    repository = Path(__file__).resolve().parents[1]
+    if output.is_relative_to(repository):
+        parser.error('Keep private audit outputs outside the repository')
     output.mkdir(parents=True, exist_ok=True)
     if (output / 'run.json').exists():
         parser.error('Output directory already contains a run; use a new directory to preserve measurements')
     manifest = {'started_at': datetime.now().astimezone().isoformat(), 'base_url': args.base_url,
-                'gsc': args.gsc, 'serp': args.serp}
+                'gsc': args.gsc, 'serp': args.serp,
+                'audit_commit': subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=repository,
+                                               capture_output=True, text=True).stdout.strip()}
     save(output / 'run.json', manifest)
     urls, errors = audit_site(args.base_url, output)
     if args.gsc:
