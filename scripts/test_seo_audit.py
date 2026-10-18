@@ -5,6 +5,8 @@ from seo_audit import Page, identity
 
 class AuditTests(unittest.TestCase):
     def test_namesakes_and_lookalike_hosts_are_not_matches(self):
+        self.assertEqual(identity(None), '')
+        self.assertEqual(identity('https://['), '')
         self.assertEqual(identity('https://uk.linkedin.com/in/iftekhar-ahmed-/'), 'linkedin')
         self.assertEqual(identity('https://au.linkedin.com/in/iftekhar-ahmed-ia'), '')
         self.assertEqual(identity('https://evillinkedin.com/in/iftekhar-ahmed-'), '')

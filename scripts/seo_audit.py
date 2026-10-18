@@ -90,8 +90,11 @@ class Page(HTMLParser):
 
 
 def identity(url):
-    u = urlsplit(url)
-    host, path = u.hostname or '', u.path.rstrip('/')
+    try:
+        u = urlsplit(url or '')
+        host, path = u.hostname or '', u.path.rstrip('/')
+    except (TypeError, ValueError):
+        return ''
     if host in ['ahmedifty.com', 'www.ahmedifty.com']:
         return 'personal-site'
     if (host == 'linkedin.com' or host.endswith('.linkedin.com')) and path == '/in/iftekhar-ahmed-':
@@ -226,7 +229,8 @@ def audit_serps(output):
                         general.get('country_code', '').lower() != country or
                         bool(general.get('mobile')) != (device == 'mobile') or
                         actual_page is not None and actual_page != page + 1 or
-                        'organic' not in data):
+                        not isinstance(data.get('organic'), list) or
+                        not all(isinstance(item, dict) for item in data.get('organic', []))):
                         raise ValueError('Provider returned mismatched or incomplete search metadata')
                     return {'query': query, 'country': country, 'device': device, 'page': page + 1,
                             'available': True, 'file': str(path), 'attempts': attempt + 1,
@@ -235,7 +239,13 @@ def audit_serps(output):
             except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
                 error = str(exc)
             if attempt == 0:
-                time.sleep(16)
+                minimum = re.search(r'(?:minimum of|retry after)\s+(\d+)\s+seconds', error, re.I)
+                delay = max(16, int(minimum[1])) if minimum else 16
+                if delay > 60:
+                    return {'query': query, 'country': country, 'device': device, 'page': page + 1,
+                            'available': False, 'attempts': 1, 'error': error,
+                            'retry_deferred_seconds': delay}
+                time.sleep(delay)
         return {'query': query, 'country': country, 'device': device, 'page': page + 1,
                 'available': False, 'attempts': 2, 'error': error}
     results = []
