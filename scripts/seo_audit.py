@@ -110,7 +110,7 @@ def audit_site(base, output):
     status, _, body, _ = fetch(urljoin(base, 'sitemap.xml'))
     if status != 200:
         raise RuntimeError(f'Sitemap HTTP {status}')
-    urls = [node.text for node in ET.fromstring(body).iter() if node.tag.endswith('}loc')]
+    urls = [node.text for node in ET.fromstring(body).findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
     if not urls or any(not u.startswith(SITE) for u in urls):
         raise RuntimeError('Sitemap must contain canonical ahmedifty.com URLs')
     pages, rows, errors = {}, [], []
